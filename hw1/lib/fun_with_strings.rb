@@ -4,7 +4,10 @@ module FunWithStrings
     chars == chars.reverse
   end
   def count_words
-    # your code here
+    self.scan(/\w+/).inject(Hash.new(0)) do |hash, key|
+      hash[key.downcase] += 1
+      hash
+    end
   end
   def anagram_groups
     # your code here
