@@ -10,7 +10,7 @@ module FunWithStrings
     end
   end
   def anagram_groups
-    # your code here
+    self.scan(/\w+/).group_by { |word| word.chars.sort }.values
   end
 end
 
