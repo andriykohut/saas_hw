@@ -6,7 +6,7 @@ class Class
     class_eval %Q{
       def #{attr_name}= value
         @#{attr_name}_history ||= []
-        @#{attr_name}_history.push @#{attr_name}
+        @#{attr_name}_history << @#{attr_name}
         @#{attr_name} = value
       end
     }
