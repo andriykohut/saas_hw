@@ -21,7 +21,8 @@ class RockPaperScissors
   end
 
   def self.tournament_winner(tournament)
-    # YOUR CODE HERE
+    return self.winner(tournament.first, tournament.last) if tournament.first.first.is_a? String
+    tournament_winner tournament.map { |game| tournament_winner game }
   end
 
 end
